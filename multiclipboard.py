@@ -6,4 +6,5 @@ import clipboard
 
 import json
 
+print(sys.argv)
 
