@@ -17,3 +17,6 @@ if len(sys.argv) == 2:
         print('list')
     else: 
         print("Unknown command")
+
+else: 
+    print("Pleae pass exactly one command")
