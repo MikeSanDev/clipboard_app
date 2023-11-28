@@ -11,5 +11,9 @@ if len(sys.argv) == 2:
 
     if command == "save":
         print('save')
-
-#restart this part ^
+    elif command == "load":
+        print('load')
+    elif command == "list":
+        print('list')
+    else: 
+        print("Unknown command")
