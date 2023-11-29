@@ -3,8 +3,14 @@
 #preinstalled modules - part of Python module
 import sys
 import clipboard
-
 import json
+
+# function to create/read json file for us
+def save_items(filepath, data):
+    with open(filepath, "w") as f: #w = write
+        json.dump(data, f) #write python dictionary as a json object
+
+save_items("test.json", {"key": "value"})
 
 if len(sys.argv) == 2:
     command = sys.argv[1]
@@ -19,4 +25,4 @@ if len(sys.argv) == 2:
         print("Unknown command")
 
 else: 
-    print("Pleae pass exactly one command")
+    print("Please pass exactly one command")
