@@ -5,18 +5,26 @@ import sys
 import clipboard
 import json
 
+SAVED_DATA = "clipboard.json"
+
 # function to create/read json file for us
-def save_items(filepath, data):
+def save_data(filepath, data):
     with open(filepath, "w") as f: #w = write
         json.dump(data, f) #write python dictionary as a json object
 
-save_items("test.json", {"key": "value"})
+def load_data(filepath):
+    with open(filepath, "r") as f:
+        data = json.load(f)
+        return data #returns python dictionary representation of this json object
 
 if len(sys.argv) == 2:
     command = sys.argv[1]
+    data = load_data(SAVED_DATA) #loads data in json file
 
     if command == "save":
-        print('save')
+        key = input("Enter a key:")
+        data[key] = clipboard.paste() #pastes data onto clipboard
+        save_data(SAVED_DATA, data) #will rewrite json file with whatever was pasted on the clipboard
     elif command == "load":
         print('load')
     elif command == "list":
