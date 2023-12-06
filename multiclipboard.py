@@ -37,9 +37,9 @@ if len(sys.argv) == 2:
         else:
             print("Key does not exist.")
     elif command == "list":
-        print('list')
+        print(data)
     else: 
         print("Unknown command")
-
+#no delete command, you can overwrite the key 
 else: 
     print("Please pass exactly one command")
