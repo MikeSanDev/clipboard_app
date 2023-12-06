@@ -27,15 +27,15 @@ if len(sys.argv) == 2:
     if command == "save":
         key = input("Enter a key:")
         data[key] = clipboard.paste() #pastes data onto clipboard
-        save_data(SAVED_DATA, data) #will rewrite json file with whatever was pasted on the clipboard
+        save_data(SAVED_DATA, data) #loaded key will be pasted to current clipboard
         print("Input saved successfully!")
     elif command == "load":
         key = input("Enter a key:")
         if key in data: #check if key exists
             clipboard.copy(data[key]) #access data by the key
+            print("Data copied to the clipboard.")
         else:
             print("Key does not exist.")
-        print('load')
     elif command == "list":
         print('list')
     else: 
