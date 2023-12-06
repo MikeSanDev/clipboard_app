@@ -1,1 +1,1 @@
-{"test": "clipboard.copy(data[key])", "new": "Michael Sanchez", "clip": "clipboard.copy(data[key])", "command": "Unknown command"}
+{"test": "SAVED_DATA", "new": "Michael Sanchez", "clip": "clipboard.copy(data[key])", "command": "Unknown command"}
