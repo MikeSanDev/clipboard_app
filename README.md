@@ -1,6 +1,4 @@
-# clipboard_app
-
-Multiclipboard App
+# Multiclipboard App
 
 ## Features
 
@@ -8,6 +6,7 @@ Multiclipboard App
 - Load data onto your clipboard by using the key you used to save the data.
 - List all of the entries in a Python Dictionary.
 - No delete command, just overwrite the key that was used.
+
 ## Getting Started
 
 1. pip-env install
